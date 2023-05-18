@@ -1,6 +1,7 @@
 import { getUser } from "@/lib/auth";
 import Image from "next/image";
 import { LogOut } from 'lucide-react';
+import Link from "next/link";
 
 export const Profile = () => {
   const {
@@ -22,8 +23,8 @@ export const Profile = () => {
 
       <p className="text-sm leading-snug max-w-[140px] select-none">
         {name}
-        <a
-          href=""
+        <Link
+          href="/api/auth/logout"
           className="flex items-center gap-1 text-red-400 hover:text-red-300 group"
         >
           Quero sair
@@ -32,7 +33,7 @@ export const Profile = () => {
             width={15}
             height={15}
           />
-        </a>
+        </Link>
       </p>
     </div>
   );
