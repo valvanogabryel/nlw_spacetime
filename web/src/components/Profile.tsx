@@ -23,7 +23,7 @@ export const Profile = () => {
 
       <p className="text-sm leading-snug max-w-[140px] select-none">
         {name}
-        <Link
+        <a
           href="/api/auth/logout"
           className="flex items-center gap-1 text-red-400 hover:text-red-300 group"
         >
@@ -33,7 +33,7 @@ export const Profile = () => {
             width={15}
             height={15}
           />
-        </Link>
+        </a>
       </p>
     </div>
   );
