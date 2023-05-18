@@ -11,6 +11,8 @@ import {
   Roboto_700Bold
 } from '@expo-google-fonts/roboto';
 
+import * as SecureStore from 'expo-secure-store';
+
 import {
   BaiJamjuree_700Bold
 } from '@expo-google-fonts/bai-jamjuree';
@@ -22,6 +24,7 @@ import NLWLogo from './src/assets/nlw-spacetime-logo.svg';
 import { styled } from 'nativewind';
 import { useAuthRequest, makeRedirectUri } from 'expo-auth-session';
 import { useEffect } from 'react';
+import { api } from '../src/lib/api';
 
 const StyledStripes = styled(Stripes);
 
@@ -61,7 +64,15 @@ export default function App() {
 
     if (response?.type === 'success') {
       const { code } = response.params;
-      console.log(code);
+      api.post('/register', {
+        code,
+      }).then(res => {
+        const { token } = res.data;
+
+        SecureStore.setItemAsync('token', token);
+      }).catch(err => {
+        console
+      });
     }
   }, [response]);
 
