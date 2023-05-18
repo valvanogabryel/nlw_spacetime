@@ -1,7 +1,6 @@
 import { getUser } from "@/lib/auth";
 import Image from "next/image";
 import { LogOut } from 'lucide-react';
-import Link from "next/link";
 
 export const Profile = () => {
   const {

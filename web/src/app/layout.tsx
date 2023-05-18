@@ -1,8 +1,6 @@
-import { EmptyMemories } from '@/components/EmptyMemories';
 import { Hero } from '@/components/Hero';
 import { Profile } from '@/components/Profile';
 import { SignIn } from '@/components/SignIn';
-import { User } from 'lucide-react';
 import { cookies } from 'next/headers';
 import './globals.css';
 import {
