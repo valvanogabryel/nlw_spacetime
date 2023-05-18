@@ -1,7 +1,7 @@
 import Image from "next/image";
 import nwlLogo from '../assets/nlw-spacetime-logo.svg';
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <div className="space-y-5">
       <Image src={nwlLogo} alt="NLW Spaceship logo" />
@@ -15,5 +15,3 @@ const Hero = () => {
     </div>
   );
 }
-
-export default Hero;

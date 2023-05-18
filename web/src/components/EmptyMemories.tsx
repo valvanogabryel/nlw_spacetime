@@ -1,4 +1,4 @@
-const EmptyMemories = () => {
+export const EmptyMemories = () => {
   return (
     <div className="flex flex-1 items-center justify-center">
       <p className="text-center leading-relaxed w-[360px]">Você ainda não registrou nenhuma lembrança, comece a {''}
@@ -10,5 +10,3 @@ const EmptyMemories = () => {
     </div>
   );
 }
-
-export default EmptyMemories;
